@@ -1,0 +1,95 @@
+import type { Poll } from "@/types/poll";
+
+const now = Date.now();
+
+export const mockPolls: Poll[] = [
+  {
+    id: "ind-mla-001",
+    title: "Ward 12 - MLA Candidate Poll",
+    description: "Vote for your preferred MLA candidate in Ward 12.",
+    options: [
+      { id: "c1", text: "Rahul Mehra", party: "People's Progress Party", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1", votes: 4820 },
+      { id: "c2", text: "Sita Sharma", party: "National Unity Front", image: "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=2", votes: 3915 },
+      { id: "c3", text: "Amit Verma", party: "Green League", image: "https://images.unsplash.com/photo-1545996124-1f1ae1f2b9d0?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3", votes: 2780 },
+    ],
+    createdAt: now - 1000 * 60 * 60 * 24 * 2,
+    expiresAt: now + 1000 * 60 * 60 * 24 * 1,
+    creator: { id: "e1", name: "Election Commission", avatarColor: "276 86% 36%" },
+    tags: ["election", "mla"],
+    settings: { allowMultiple: false, allowRevote: true, showResultsBeforeVote: true },
+  },
+  {
+    id: "ind-nagar-001",
+    title: "Upcoming Nagar Sevak Poll",
+    description: "Choose the next Nagar Sevak for your locality.",
+    options: [
+      { id: "c1", text: "Priya Nair", party: "People's Progress Party", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=4", votes: 2210 },
+      { id: "c2", text: "Ramesh Gupta", party: "National Unity Front", image: "https://images.unsplash.com/photo-1545996124-1f1ae1f2b9d0?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=5", votes: 1890 },
+      { id: "c3", text: "Neha Patel", party: "Independent", image: "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=6", votes: 1540 },
+    ],
+    createdAt: now - 1000 * 60 * 60 * 6,
+    expiresAt: now + 1000 * 60 * 60 * 12,
+    creator: { id: "e2", name: "City Council", avatarColor: "210 100% 62%" },
+    tags: ["election", "nagar-sevak"],
+    settings: { allowMultiple: false, allowRevote: false, showResultsBeforeVote: false },
+  },
+  {
+    id: "ind-mla-002",
+    title: "By-election: Upcoming Nagar Sevak",
+    description: "Poll for a by-election in the municipality.",
+    options: [
+      { id: "c1", text: "Vikram Singh", party: "People's Progress Party", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=7", votes: 980 },
+      { id: "c2", text: "Lata Iyer", party: "National Unity Front", image: "https://images.unsplash.com/photo-1545996124-1f1ae1f2b9d0?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=8", votes: 870 },
+    ],
+    createdAt: now - 1000 * 60 * 60 * 2,
+    expiresAt: null,
+    creator: { id: "e3", name: "Admin", avatarColor: "276 86% 36%" },
+    tags: ["election"],
+    settings: { allowMultiple: false, allowRevote: true, showResultsBeforeVote: true },
+  },
+  {
+    id: "ind-mla-003",
+    title: "Ward 7 - Nagar Sevak",
+    description: "Local Nagar Sevak election — cast your mock vote.",
+    options: [
+      { id: "s1", text: "Suleman Khan", party: "People's Progress Party", image: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=10", votes: 1500 },
+      { id: "s2", text: "Shaikh Musa", party: "National Unity Front", image: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=11", votes: 1320 },
+      { id: "s3", text: "Shaikh Shafe", party: "Independent", image: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=12", votes: 980 },
+    ],
+    createdAt: now - 1000 * 60 * 60 * 24 * 5,
+    expiresAt: now + 1000 * 60 * 60 * 24 * 2,
+    creator: { id: "e4", name: "City Election Board", avatarColor: "276 86% 36%" },
+    tags: ["election", "nagar-sevak", "local"],
+    settings: { allowMultiple: false, allowRevote: false, showResultsBeforeVote: true },
+  },
+  {
+    id: "ind-mla-004",
+    title: "District 3 - Best Candidate",
+    description: "City-wide poll for district leadership.",
+    options: [
+      { id: "d1", text: "Suleman Khan", party: "People's Progress Party", image: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=13", votes: 2020 },
+      { id: "d2", text: "Anjali Rao", party: "Progress Alliance", image: "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=14", votes: 1750 },
+      { id: "d3", text: "Ravi Singh", party: "National Unity Front", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=15", votes: 1200 },
+    ],
+    createdAt: now - 1000 * 60 * 60 * 24 * 10,
+    expiresAt: now + 1000 * 60 * 60 * 24 * 5,
+    creator: { id: "e5", name: "State Election Office", avatarColor: "210 100% 62%" },
+    tags: ["election", "district"],
+    settings: { allowMultiple: false, allowRevote: false, showResultsBeforeVote: true },
+  },
+  {
+    id: "ind-mla-005",
+    title: "City Council - Top Choice",
+    description: "Polling for city council representation.",
+    options: [
+      { id: "c11", text: "Shaikh Musa", party: "National Unity Front", image: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=16", votes: 980 },
+      { id: "c12", text: "Meera Patel", party: "Independent", image: "https://images.unsplash.com/photo-1545996124-1f1ae1f2b9d0?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=17", votes: 870 },
+      { id: "c13", text: "Kunal Desai", party: "People's Progress Party", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=18", votes: 650 },
+    ],
+    createdAt: now - 1000 * 60 * 60 * 24 * 3,
+    expiresAt: now + 1000 * 60 * 60 * 24 * 7,
+    creator: { id: "e6", name: "Municipal Board", avatarColor: "276 86% 36%" },
+    tags: ["election", "council"],
+    settings: { allowMultiple: false, allowRevote: true, showResultsBeforeVote: true },
+  },
+];
