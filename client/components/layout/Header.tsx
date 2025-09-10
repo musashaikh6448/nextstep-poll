@@ -58,7 +58,7 @@ export default function Header() {
         {open && (
           <div className="fixed inset-0 z-[9999]">
             <div className="absolute inset-0 bg-black/40" onClick={() => setOpen(false)} />
-            <aside className="absolute right-0 top-0 h-full w-80 bg-background/100 dark:bg-[#0b1220] p-4 border-l border-white/8 shadow-2xl overflow-y-auto transform transition-transform duration-300">
+            <aside className="absolute right-0 top-0 h-50 w-80 bg-background/100 dark:bg-[#0b1220] p-4 border-l border-white/8 shadow-2xl overflow-y-auto transform transition-transform duration-300">
               <div className="flex items-center justify-between">
                 <BrandLogo />
                 <button onClick={() => setOpen(false)} aria-label="Close menu" className="p-2 rounded-md bg-white/5 text-foreground/80 hover:bg-white/10">
